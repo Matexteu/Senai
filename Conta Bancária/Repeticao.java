@@ -6,7 +6,7 @@ public class Repeticao {
     
 //     Códigos aprendidos -> [equals() e !equals(), Integer.parseInt() e Double.parseDouble(), Repetições usando métodos]
     
-   Dados dados1 = new Dados();
+    Dados dados1 = new Dados();
     Scanner inserir = new Scanner(System.in);
     Menu menu = new Menu();
 
