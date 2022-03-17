@@ -3,21 +3,23 @@ package br.senai.model;
 import java.util.Scanner;
 
 public class Repeticao {
-
-    Dados dados1 = new Dados();
+    
+//     Códigos aprendidos -> [equals() e !equals(), Integer.parseInt() e Double.parseDouble(), Repetições usando métodos]
+    
+   Dados dados1 = new Dados();
     Scanner inserir = new Scanner(System.in);
     Menu menu = new Menu();
 
     public void saque() {
 
         System.out.print("Insira o valor: ");
-        dados1.sacar(Integer.parseInt(inserir.nextLine()));
+        dados1.sacar(Double.parseDouble(inserir.nextLine()));
         System.out.println("\n" + "Saldo atual: " + dados1.getSaldo() + "\n");
 
         while (menu.getParar() != 2) {
             System.out.println("Deseja fazer outro saque?" + "\n" +
-                                "1 - Sim" + "\n" +
-                                "2 - Não" + "\n");
+                    "1 - Sim" + "\n" +
+                    "2 - Não" + "\n");
             System.out.print("Opção: ");
             menu.setNumero(inserir.nextLine());
             if (menu.getNumero().equals("1")) {
@@ -34,13 +36,13 @@ public class Repeticao {
     public void deposito() {
 
         System.out.print("Insira o valor: ");
-        dados1.depositar(Integer.parseInt(inserir.nextLine()));
+        dados1.depositar(Double.parseDouble(inserir.nextLine()));
         System.out.println("\n" + "Saldo atual: " + dados1.getSaldo());
 
         while (menu.getParar() != 2) {
             System.out.println("\n" + "Deseja fazer outro depósito?" + "\n" +
-                                "1 - Sim" + "\n" +
-                                "2 - Não" + "\n");
+                    "1 - Sim" + "\n" +
+                    "2 - Não" + "\n");
             System.out.print("Opção: ");
             menu.setNumero(inserir.nextLine());
             if (menu.getNumero().equals("1")) {
@@ -59,12 +61,12 @@ public class Repeticao {
         System.out.print("\n" + "Novo nome do titular da conta: ");
         dados1.setNome(inserir.nextLine());
         System.out.println("\n" + "Conta: " + dados1.getNome() + "\n"
-                                + "Número da conta: " + dados1.getConta());
+                + "Número da conta: " + dados1.getConta());
 
         while (menu.getParar() != 2) {
             System.out.println("\n" + "Deseja mudar novamente o titular da conta?" + "\n" +
-                                "1 - Sim" + "\n" +
-                                "2 - Não" + "\n");
+                    "1 - Sim" + "\n" +
+                    "2 - Não" + "\n");
             System.out.print("Opção: ");
             menu.setNumero(inserir.nextLine());
             if (menu.getNumero().equals("1")) {
@@ -99,18 +101,29 @@ public class Repeticao {
 
     }
 
-    public void depósitoInicial() {
-        
-        while (menu.getParar() != (1)) {
-            System.out.print("Deposíto de valor inicial: ");
-            dados1.setSaldo(Integer.parseInt(inserir.nextLine()));
-            if (dados1.getSaldo() < 0) {
-                System.out.println("Não foi possível depositar esse valor, tente com outro valor" + "\n");
-            } else {
-                menu.setParar(1);
+    public void depositoInicial() {
+
+        System.out.println("\n" + "Você deseja fazer um deposíto inicial?" + "\n" +
+                "1 - Sim" + "\n" +
+                "2 - Não" + "\n");
+        System.out.print("Opção: ");
+        menu.setNumero(inserir.nextLine());
+        if (menu.getNumero().equals("1")) {
+            while (menu.getParar() != (1)) {
+                System.out.print("Deposíto de valor inicial: ");
+                dados1.setSaldo(Double.parseDouble(inserir.nextLine()));
+                if (dados1.getSaldo() <= 0) {
+                    System.out.println("Não foi possível depositar esse valor, tente com outro valor" + "\n");
+                } else {
+                    menu.setParar(1);
+                }
             }
+        } else if (menu.getNumero().equals("2")) {
+            menu.setParar(1);
+        } else {
+            System.out.println("Digite uma das opções disponíveis por favor" + "\n");
         }
-        
+
     }
 
     public void inicio() {
@@ -120,7 +133,7 @@ public class Repeticao {
         dados1.setNome(inserir.nextLine());
         System.out.print("Número da conta: ");
         dados1.setConta(inserir.nextLine());
-        depósitoInicial();
+        depositoInicial();
         System.out.println("\n" + "Bem vindo(a) " + dados1.getNome() + ", no que podemos te ajudar?");
 
     }
@@ -135,6 +148,7 @@ public class Repeticao {
                 System.out.println("\n" + "Saldo da conta: " + dados1.getSaldo());
                 menuVoltar();
             } else if (menu.getNumero().equals("2")) {
+                System.out.println("\n" + "Uma taxa de R$5,00 será cobrada para cada saque");
                 saque();
             } else if (menu.getNumero().equals("3")) {
                 deposito();
@@ -147,7 +161,6 @@ public class Repeticao {
                 System.out.println("Digite uma das opções disponíveis por favor" + "\n");
                 menu();
             }
-            
         }
 
     }
