@@ -100,6 +100,7 @@ public class Repeticao {
     }
 
     public void depósitoInicial() {
+        
         while (menu.getParar() != (1)) {
             System.out.print("Deposíto de valor inicial: ");
             dados1.setSaldo(Integer.parseInt(inserir.nextLine()));
@@ -109,6 +110,7 @@ public class Repeticao {
                 menu.setParar(1);
             }
         }
+        
     }
 
     public void inicio() {
@@ -145,6 +147,7 @@ public class Repeticao {
                 System.out.println("Digite uma das opções disponíveis por favor" + "\n");
                 menu();
             }
+            
         }
 
     }
