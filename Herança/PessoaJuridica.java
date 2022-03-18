@@ -29,6 +29,7 @@ public class PessoaJuridica extends Pessoa{
 
     @Override
     public String toString() {
-        return super.toString() + "CNPJ: " + cnpj + "IE: " + ie;
+        return super.toString() + ", CNPJ: " + cnpj + ", IE: " + ie;
     }
+
 }
