@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: rgb(70, 15, 88);
+    text-align: center;
+    color: white;
+    padding: 16px;
+}
+
+#logo {
+    width: 10%;
+    height: 10%;
+}
+
+#barra {
+    background-color: rgb(255, 255, 255);
+    padding: 4px;
+    text-align: center;
+}
+
+
+#barra ul li {
+    display: inline-block;
+    list-style: none;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#barra ul :hover {
+    background-color: rgb(212, 212, 212);
+    cursor: pointer;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+.link {
+    color: rgb(0, 119, 255);
+    text-decoration:underline;
+}
+
+#lista {
+    background-color: rgb(117, 85, 192);
+    padding: 25px;
+    display: inline-flex;
+}
+
+.topico {
+    background-color: rgb(138, 107, 209);
+    padding: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: center;
+}
+
+.linhavideos {
+    padding: 5px;
+}
+
+p {
+    padding: 5px;
+}
+
+.thumb {
+    width: 75%;
+    height: 75%;
+    background-color: rgb(255, 255, 255);
+    padding: 5px;
+}
+
+.titulo {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.logti {
+    color: white;
+}
+
+#login {
+    padding: 20px;
+    background-color: rgb(44, 41, 44);
+    text-align: center;
+}
+
+input[type=text]  {
+    text-align: center;
+    padding: 2px;
+}
+
+input[type=button] {
+    width: auto;
+    padding: 4px;
+}
+
+#principal {
+    background-color: rgb(117, 85, 192);
+    padding: 20px;
+    text-align: center;
+
+}
+
