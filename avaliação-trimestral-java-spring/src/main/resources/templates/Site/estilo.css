@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: rgb(93, 255, 134);
+    padding: 20px;
+}
+
+nav {
+    padding: 20px;
+}
+
+body {
+    background-color: rgb(138, 138, 255);
+}
+
+#container {
+    background-color: coral;
+    padding: 20px;
+}
+
+table, tr, td {
+    border: 1px solid;
+    text-align: center;
+}
+
+td {
+    padding: 5px;
+    text-align: center;
+}
