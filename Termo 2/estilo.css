@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html{
+    --outroLugar: ;
+    
+    --colorWrongFG: #504a4b;
+}
+
+body {
+    text-align: center;
+    background-color: #6e5c62;
+    color: white;
+}
+
+h1 {
+    margin-top: 20px;
+}
+
+#jogo {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.chances {
+    padding: 2px;
+}
+
+.input {
+    background-color: #6e5c62;
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    font-size: 36px;
+    border-radius: 5px;
+    border-color: #4c4347;
+    color: white;
+    border-style: solid;
+    border-width: 5px;
+    text-transform:uppercase
+}
+
+input[type=button] {
+    font-size: 30px;
+    width: 60px;
+    height: 54px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4c4347;
+    color: white;
+    margin-left: 5px;
+}
+
+.linhas {
+    padding: 4px;
+}
+
+.certo{
+    background-color: #3aa394;
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    font-size: 36px;
+    border-radius: 5px;
+    border-color: #4c4347;
+    color: white;
+    border-style: solid;
+    border-width: 5px;
+    text-transform:uppercase
+}
+
+.outroLugar {
+    background-color: #d3ad69;
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    font-size: 36px;
+    border-radius: 5px;
+    border-color: #4c4347;
+    color: white;
+    border-style: solid;
+    border-width: 5px;
+    text-transform:uppercase
+}
+
+.naoTem{
+    background-color: #312a2c;
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    font-size: 36px;
+    border-radius: 5px;
+    border-color: #4c4347;
+    color: white;
+    border-style: solid;
+    border-width: 5px;
+    text-transform:uppercase
+}
